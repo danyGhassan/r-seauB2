@@ -165,3 +165,11 @@ Itinéraire déterminé.
 ```
 ### ☀️ IP publique
 
+- l'adresse IP publique de la passerelle du réseau (le routeur d'YNOV donc si vous êtes dans les locaux d'YNOV quand vous faites le TP)
+
+```
+195.7.117.146
+```
+## 195.7.117.146
+## III. Le requin
+### ☀️ Capture ARP
