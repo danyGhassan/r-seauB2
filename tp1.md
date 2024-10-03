@@ -116,3 +116,52 @@ Durée approximative des boucles en millisecondes :
 
 - l'adresse IP du serveur auquel vous êtes connectés pour regarder la vidéo
 
+```
+64.233.184.188
+```
+- le port du serveur auquel vous êtes connectés
+```
+49665
+```
+- le port que votre PC a ouvert en local pour se connecter au port du serveur distant
+```
+443
+```
+### ☀️ Requêtes DNS
+
+- à quelle adresse IP correspond le nom de domaine www.thinkerview.com
+```
+
+PS C:\Users\ghass> nslookup www.thinkerview.com
+Serveur :   dns.google
+Address:  8.8.8.8
+```
+
+```
+PS C:\Users\ghass> nslookup 143.90.88.12
+Nom :    EAOcf-140p12.ppp15.odn.ne.jp
+Address:  143.90.88.12
+```
+
+### ☀️ Hop hop hop
+
+- par combien de machines vos paquets passent quand vous essayez de joindre www.ynov.com
+```
+PS C:\Users\ghass> tracert ynov.com
+
+Détermination de l’itinéraire vers ynov.com [172.67.74.226]
+avec un maximum de 30 sauts :
+
+  1     5 ms    19 ms     2 ms  10.33.79.254
+  2     4 ms     2 ms     2 ms  145.117.7.195.rev.sfr.net [195.7.117.145]
+  3   228 ms     3 ms     3 ms  237.195.79.86.rev.sfr.net [86.79.195.237]
+  4     3 ms     4 ms     4 ms  196.224.65.86.rev.sfr.net [86.65.224.196]
+  5    15 ms    11 ms    11 ms  164.147.6.194.rev.sfr.net [194.6.147.164]
+  6     *        *        *     Délai d’attente de la demande dépassé.
+  7     *       19 ms   337 ms  162.158.20.240
+  8   207 ms    15 ms   276 ms  172.67.74.226
+
+Itinéraire déterminé.
+```
+### ☀️ IP publique
+
