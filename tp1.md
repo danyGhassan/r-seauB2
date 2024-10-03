@@ -173,3 +173,8 @@ Itinéraire déterminé.
 ## 195.7.117.146
 ## III. Le requin
 ### ☀️ Capture ARP
+- capturez un échange ARP entre votre PC et la passerelle du réseau :
+[capture](./arp3.pcap)
+### ☀️ Capture DNS
+- capturez une requête DNS vers le domaine de votre choix et la réponse : [capture](./dns.pcap)
+
