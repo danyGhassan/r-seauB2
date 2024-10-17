@@ -1,6 +1,7 @@
 # TP4 SECU : Exfiltration
 ## I. Getting started Scapy
 ### 🌞 ping.py
+[ping.py](/tp4/ping.py)
 
 ```
 danyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 ping.py
@@ -12,3 +13,22 @@ Pong reçu : QueryAnswer(query=<Ether  dst=20:16:b9:2a:02:70 src=28:7f:cf:99:86:
 ```
 
 ### 🌞 tcp_cap.py
+[tcp_cap.py](/tp4/tcp_cap.py)
+
+```
+danyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 tcp_cap.py 
+TCP SYN ACK reçu !
+- Adresse IP source : 104.18.29.67
+- Adresse IP destination : 10.33.79.176
+- Port source : 443
+- Port destination : 41236
+```
+
+### 🌞 dns_cap.py
+
+[dns_cap.py](/tp4/tcp_cap.py)
+
+```
+danyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 dns_cap.py 
+172.67.74.226
+```
