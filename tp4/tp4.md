@@ -32,3 +32,4 @@ TCP SYN ACK reçu !
 danyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 dns_cap.py 
 172.67.74.226
 ```
+### 🌞 dns_lookup.py
