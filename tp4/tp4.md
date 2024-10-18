@@ -33,3 +33,23 @@ danyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 dns_cap.py
 172.67.74.226
 ```
 ### 🌞 dns_lookup.py
+[dns_lookup.py](/tp4/dns_lookup.py)
+
+```
+anyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 dns_lookup.py 
+Begin emission:
+Finished sending 1 packets.
+*
+Received 1 packets, got 1 answers, remaining 0 packets
+UDP : QueryAnswer(query=<Ether  dst=cc:00:f1:3e:b6:f5 type=IPv4 |<IP  frag=0 proto=udp dst=1.1.1.1 |<UDP  sport=46089 dport=domain |<DNS  rd=1 qd=<DNSQR  qname='ynov.com.' qtype=A |> |>>>>, answer=<Ether  dst=28:7f:cf:99:86:8a src=cc:00:f1:3e:b6:f5 type=IPv4 |<IP  version=4 ihl=5 tos=0x60 len=102 id=48817 flags=DF frag=0 ttl=56 proto=udp chksum=0xbf29 src=1.1.1.1 dst=192.168.1.162 |<UDP  sport=domain dport=46089 len=82 chksum=0x29f4 |<DNS  id=0 qr=1 opcode=QUERY aa=0 tc=0 rd=1 ra=1 z=0 ad=0 cd=0 rcode=ok qdcount=1 ancount=3 nscount=0 arcount=0 qd=<DNSQR  qname='ynov.com.' qtype=A qclass=IN |> an=<DNSRR  rrname='ynov.com.' type=A rclass=IN ttl=300 rdlen=4 rdata=104.26.11.233 |<DNSRR  rrname='ynov.com.' type=A rclass=IN ttl=300 rdlen=4 rdata=172.67.74.226 |<DNSRR  rrname='ynov.com.' type=A rclass=IN ttl=300 rdlen=4 rdata=104.26.10.233 |>>> ns=None ar=None |>>>>)
+```
+
+## II. ARP Poisoning
+
+### 🌞 arp_poisoning.py
+[arp_poisoning.py](/tp4/arp_poisoning.py)
+ce code modifie seulement la MAC , je n'ai pas reussi a faire l'IP également
+
+## II. Exfiltration ICMP
+
+### 🌞 icmp_exf_send.py
