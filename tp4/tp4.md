@@ -48,8 +48,12 @@ UDP : QueryAnswer(query=<Ether  dst=cc:00:f1:3e:b6:f5 type=IPv4 |<IP  frag=0 pro
 
 ### 🌞 arp_poisoning.py
 [arp_poisoning.py](/tp4/arp_poisoning.py)
-ce code modifie seulement la MAC , je n'ai pas reussi a faire l'IP également
+- ce code modifie seulement la MAC , je n'ai pas reussi a faire l'IP également
 
 ## II. Exfiltration ICMP
 
 ### 🌞 icmp_exf_send.py
+[icmp_exf_send.py](/tp4/icmp_exf_send.py)
+- on peut voir sur wireshark que nous avons exfiltrer le caractère
+
+### 🌞 icmp_exf_receive.py
