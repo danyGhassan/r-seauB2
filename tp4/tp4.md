@@ -57,3 +57,13 @@ UDP : QueryAnswer(query=<Ether  dst=cc:00:f1:3e:b6:f5 type=IPv4 |<IP  frag=0 pro
 - on peut voir sur wireshark que nous avons exfiltrer le caractère
 
 ### 🌞 icmp_exf_receive.py
+[icmp_exf_receive.py](/tp4/icmp_exf_receive.py)
+
+```
+danyg@danygThinkPad:~/projets/r-seauB2/tp4$ sudo python3 icmp_exf_receive.py 
+k
+```
+
+## III. Exfiltration DNS
+
+### 🌞 dns_exfiltration_send.py
