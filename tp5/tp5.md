@@ -191,3 +191,54 @@ systemctl list-units -t service
   user-runtime-dir@1000.service      loaded active exited  User Runtime Directory /run/user/1000
   user@1000.service                  loaded active running User Manager for UID 1000
 ```
+
+## II. Remédiation
+
+### 🌞 Proposer une remédiation dév
+
+- ne pas utiliser eval() dans le code car permet d'executer du code python et non calculer
+- mettre des conditions du coté serveur pour filter le input comme ce ci par exemple
+```
+import socket
+import re
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind(('0.0.0.0', 13337))  
+
+s.listen(1)
+conn, addr = s.accept()
+
+while True:
+
+    try:
+        # On reçoit la string Hello du client
+        data = conn.recv(1024)
+        if not data: break
+        print(f"Données reçues du client : {data}")
+
+        conn.send("Hello".encode())
+
+        # On reçoit le calcul du client
+        data = conn.recv(1024)
+        data = data.decode().strip("\n")
+        # condition ajouté
+        for i in data:
+            if i not in '0123456789 +-*':
+                conn.close()
+        # Evaluation et envoi du résultat
+        
+        res  = eval(data)
+        conn.send(str(res).encode())
+        
+         
+    except socket.error:
+        print("Error Occured.")
+        break
+
+conn.close()
+```
+
+### 🌞 Proposer une remédiation système
+- ne pas lancer le serveur en tant que root
+- le serveur ne doit en aucun cas envoyer des informations vers l'extérieur, il faut donc bloquer toutes les sorties qui sont autres que le fonctionnement de base du serveur

@@ -3,7 +3,7 @@ import sys
 import re
 import logging
 # On définit la destination de la connexion
-host = '10.33.72.233'  # IP du serveur
+host = '192.168.1.162'  # IP du serveur
 port = 13337               # Port choisir par le serveur
 
 class CustomFormatter(logging.Formatter):
