@@ -2,31 +2,30 @@
 ## I. DNS Rebinding
 ### 🌞 Write-up de l'épreuve
 - ### DNS Rebinding 
-    Le devops de cette petite application web a peu de temps et peu de moyens. L’interface d’administration est ainsi, comme souvent, embarquée avec l’IHM utilisateur. Pour autant il s’est assuré qu’on ne puisse pas y accéder de l’extérieur !
+Lorsque on se renseinge sur DNS rebinding sur google : Le DNS rebinding est une technique couramment utilisée par les cyberattaquants. Elle consiste à manipuler la résolution de nom de domaine de façon à ce que le visiteur d’une page web malveillante exécute un script côté client qui attaque d’autres machines sur le réseau.
+
+Le but de l'épreuve est de contourner l'utilisation principal du site du challenge  qui est de reproduire de façon simple le site qu'on lui donne en argument.
+
+Notre objectif sera donc de contourner l'utilisation principal du programme est d'accéder a la page admin avec le DNS Rebinding.
+
+Lorsque nous cherchons "DNS Rebinding tool" sur goole nous trouvons cette page : [DNS Rebinding tool ](https://lock.cmpxchg8b.com/rebinder.html)
+
+Lorsqu'on lit le code source donné par l'epreuve , nous découvrons que pour accéder a la page admin, nous avons besoin d'avoir cette ip : 127.0.0.1 .
+Nous obtenons donc 7f000001.c0a80001.rbndr.us . Mais pour accéder a la page admin il faut préciser le chemin en plus de "l'url": 7f000001.c0a80001.rbndr.us:54022/admin
+
+en spammant cette url on obtiens le flag .
+
 
 ### 🌞 Proposer une version du code qui n'est pas vulnérable
 ## II. Netfilter erreurs courantes
 ### 🌞 Write-up de l'épreuve
 
-- ### Netfilter - erreurs courantes
-    Un administrateur plein de bonne volonté a essayé de renforcer la sécurité de son serveur en ajustant les règles du pare-feu. Vérifiez qu’il a bien fait son travail !
-
 ### 🌞 Proposer un jeu de règles firewall
 
 ## III. ARP Spoofing Ecoute active
 ### 🌞 Write-up de l'épreuve
-- ###  ARP Spoofing - Écoute active 
-    Votre ami vous assure que vous ne pouvez pas récupérer les informations confidentielles qui transitent sur son réseau. Il est tellement sûr de lui qu’il vous donne un accès à son LAN via une machine que vous contrôlez.
 
-    Le flag est la concaténation de la réponse à une requête sur le réseau, ainsi que le mot de passe de la base de données, de la forme suivante : reponse:db_password.
-    Démarrez le CTF-ATD "ARP Spoofing EcouteActive"
-    Connectez-vous en SSH sur la machine port 22222 (root:root)
-    Il n’y a pas de validation de l’environnement virtuel avec un /passwd
-
-    N’hésitez pas à changer le mot de passe de l’utilisateur root afin d’être seul sur la machine pour réaliser vos manipulations.
 
 ## IV. Bonus : Trafic Global System for Mobile communications
 
 ### ⭐ BONUS : Write-up de l'épreuve
-- ###  Trafic Global System for Mobile communications.
-    Vous êtes mandaté pour analyser une capture réseau. Vous devez remettre quelque chose de compréhensible à votre interlocuteur, même si à première vue la trace parait incomplète.
